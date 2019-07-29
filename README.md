@@ -8,7 +8,7 @@ Because I want to be as accurate as I can and the data is very unbalanced, I wil
 
 * Sensitivity
 * Specificity
-* (Balanced Accuracy) [https://scikit-learn.org/stable/modules/generated/sklearn.metrics.balanced_accuracy_score.html#sklearn.metrics.balanced_accuracy_score]
-* (F1 Score) [https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html#sklearn.metrics.f1_score]
-* (Fowlkes-Mallow Score) [https://scikit-learn.org/stable/modules/generated/sklearn.metrics.fowlkes_mallows_score.html]
-* (Jaccard Score) [https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html]
+* [Balanced Accuracy](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.balanced_accuracy_score.html#sklearn.metrics.balanced_accuracy_score)
+* [F1 Score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html#sklearn.metrics.f1_score)
+* [Fowlkes-Mallow Score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.fowlkes_mallows_score.html)
+* [Jaccard Score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html)
