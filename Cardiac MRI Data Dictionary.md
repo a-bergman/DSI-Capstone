@@ -47,4 +47,3 @@
 | AS_Ischemia        | Boolean     | Loss of blood flow to the tissue on the apical antero-septal portion of the heart | Simple Boolean                                |
 | AI_Ischemia        | Boolean     | Loss of blood flow to the tissue on the apical inferior portion of the heart      | Simple Boolean                                |
 | AL_Ischemia        | Boolean     | Loss of blood flow to the tissue on the apical lateral portion of the heart       | Simple Boolean                                |
-| LV_Dilation        | Boolean     | Whether or not the subject has left ventricular dilation                          | Simple Boolean                                |
