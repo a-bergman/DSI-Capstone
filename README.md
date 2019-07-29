@@ -1,10 +1,19 @@
 # Problem Statement
 
-Left ventricular dilation, also known as dilated caridomyopathy, simply put is the enlargement of the left ventricle determined by the volume of blood in the left ventricle during the heart's diastolic phase.  The condition is serious because the muscle wall in the left ventricle thins and its ability to pump blood out of the heart is seriously impact: the condition contributes to serious caridac conditions such as clots, arrythmias, valvular disease, or congestive heart failure.  It is important for a physician to determine if a subject is at risk for or has ventricular dilation. 
+Left ventricular dilation, also known as dilated cardiomyopathy, simply put is the enlargement of the left ventricle as determined by the volume of blood in the left ventricle during the heart's diastolic phase.  It is serious because the muscle wall thins and its ability to pump blood out of the heart is reduced: the condition can contribute to serious caridac conditions such as clots, arrythmias, valvular disease, and congestive heart failure.  Prediction of this condition would give a physician warning that a subject needs close monitoring. 
 
-The diagnosis is usually determined through MRI volume measurements, but not every physician has access to them.  The goal of this project is to predict who is at-risk of and who has left ventricular dilation as accurately possible but also in a way that minimizes false negatives.  I will approach this as a classification problem with three targets: normal, at-risk, and high.  By adding an at-risk category, I am hoping to identify subjects who need to closely monitored.
+The diagnosis is usually determined through MRI volume measurements, but not every physician has access to them.  This project has two targets: high and at-risk:
 
-Because I want to be as accurate as I can and the data is very unbalanced, I will use multiple metrics that are suited for unbalanced data:
+|Category | Men     | Women   |
+|:--------|:--------|:------- |
+| Normal  | <186 mL | <139 mL |
+| At-risk | >186 mL | >139 mL |
+| High    | >214 mL | >178 mL |
+
+
+The goal of this project is to predict who to classify who is at-risk of and who has left ventricular dilation based off of cardiac MRI and patient demographic measurements.  I will compare [models] 
+
+Because the data is unbalanced, I will use multiple metrics that are suited for unbalanced data:
 
 * Sensitivity
 * Specificity
