@@ -2,16 +2,7 @@
 
 Left ventricular dilation, also known as dilated cardiomyopathy, simply put is the enlargement of the left ventricle as determined by the volume of blood in the left ventricle during the heart's diastolic phase.  It is serious because the muscle wall thins and its ability to pump blood out of the heart is reduced: the condition can contribute to serious caridac conditions such as clots, arrythmias, valvular disease, and congestive heart failure.  Prediction of this condition would give a physician warning that a subject needs close monitoring. 
 
-The diagnosis is usually determined through MRI volume measurements, but not every physician has access to them.  This project has two targets: high and at-risk:
-
-|Category | Men     | Women   |
-|:--------|:--------|:------- |
-| Normal  | <186 mL | <139 mL |
-| At-risk | >186 mL | >139 mL |
-| High    | >214 mL | >178 mL |
-
-
-The goal of this project is to predict who to classify who is at-risk of and who has left ventricular dilation based off of cardiac MRI and patient demographic measurements.  (I'm not entirely sure what model(s) I'm going to be using yet, I'm going to try to get office hours with Matt on Friday or Sunday.)
+The goal of this project is to classify who is at-risk of and who has left ventricular dilation based off of cardiac MRI and patient biometric measurements.  (I'm not entirely sure what model(s) I'm going to be using yet, I'm going to try to get office hours with Matt on Friday or Sunday.)
 
 Because the data is unbalanced, I will use multiple metrics that are suited for unbalanced data:
 
