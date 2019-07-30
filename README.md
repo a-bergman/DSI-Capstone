@@ -11,12 +11,13 @@ The diagnosis is usually determined through MRI volume measurements, but not eve
 | High    | >214 mL | >178 mL |
 
 
-The goal of this project is to predict who to classify who is at-risk of and who has left ventricular dilation based off of cardiac MRI and patient demographic measurements.  I will compare [models] 
+The goal of this project is to predict who to classify who is at-risk of and who has left ventricular dilation based off of cardiac MRI and patient demographic measurements.  (I'm not entirely sure what model(s) I'm going to be using yet, I'm going to try to get office hours with Matt on Friday or Sunday.)
 
 Because the data is unbalanced, I will use multiple metrics that are suited for unbalanced data:
 
 * Sensitivity
 * Specificity
+* ROC-AUC Score
 * [Balanced Accuracy](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.balanced_accuracy_score.html#sklearn.metrics.balanced_accuracy_score)
 * [F1 Score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html#sklearn.metrics.f1_score)
 * [Fowlkes-Mallow Score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.fowlkes_mallows_score.html)
