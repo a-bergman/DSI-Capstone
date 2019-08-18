@@ -2,7 +2,7 @@
 
 Left ventricular dilation, also known as dilated cardiomyopathy, simply put is the enlargement of the left ventricle as determined by the volume of blood in the left ventricle during the heart's diastolic phase.  It is serious because the muscle wall thins and its ability to pump blood out of the heart is reduced: the condition is a warning that an individual is severely at risk of developing congestive heart failure.  Being able to predict the end diastolic volume will aid cardiologists in deciding who needs further test; a patient would never be given therapy without having an image taken.  Thus a model could increase the efficiency of medical teams and reduce hospital costs.
 
-To approach this problem I will use a regression model to predict the end diastolic volume.  To judge my model's performance, I will use the root mean squared error (MRSE) and the $\r<sup>2</sup> score.  Within the data itself there are three classes: normal, at-risk, and high.  In addition to using the two metrics I mentioned, I will compare my regression model's predictions against the actual classifications in my data set.  Doing that extra step allows for an additional measure of performance.
+To approach this problem I will use a regression model to predict the end diastolic volume.  To judge my model's performance, I will use the root mean squared error (MRSE) and the r<sup>2</sup> score.  Within the data itself there are three classes: normal, at-risk, and high.  In addition to using the two metrics I mentioned, I will compare my regression model's predictions against the actual classifications in my data set.  Doing that extra step allows for an additional measure of performance.
 
 -------
 
