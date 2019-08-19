@@ -10,7 +10,7 @@ To approach this problem we will use a regression model to predict the end diast
 
 The cost of healthcare has been in the news for the past couple of years because of how expensive medical testing and treatment is in the United States and cardiac imaging is no exception.  The median price of a cardiac MRI in the New York area is $1,507, but that's not all: MRI scans are very claustrophobic and can take a long time to complete.
 
-(Source)[https://www.newchoicehealth.com/places/new-york/new-york/mri/cardiac-mri] for the median price.
+[Source](https://www.newchoicehealth.com/places/new-york/new-york/mri/cardiac-mri]) for the median price.
 
 -------
 
