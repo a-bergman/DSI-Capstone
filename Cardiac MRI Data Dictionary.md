@@ -1,11 +1,11 @@
 | Column             | Data Type   | Description                                                                       | Comments                                      |
 |:-------------------|:------------|:----------------------------------------------------------------------------------|:----------------------------------------------|
 | Name               | Object      | Name of the MRI image                                                             |                                               |
-| Age                | Boolean     | Age at time of the MRI                                                            |                                               |
-| Sex                | Boolean     | Patient sex                                                                       | Simple Boolean                                |
-| Hypertension       | Boolean     | Presence of hypertension                                                          | Does not include degree of hypertension       |
-| Hyperlipidemia     | Boolean     | Presence of hyperlipidemia                                                        | Does not include degree of hyperlipidemia     |
-| Diabetes           | Boolean     | Presence of diabetes                                                              | Simple Boolean                                |
+| Age                | Binary      | Age at time of the MRI                                                            |                                               |
+| Sex                | Binary      | Patient sex                                                                       | Simple Boolean                                |
+| Hypertension       | Binary      | Presence of hypertension                                                          | Does not include degree of hypertension       |
+| Hyperlipidemia     | Binary      | Presence of hyperlipidemia                                                        | Does not include degree of hyperlipidemia     |
+| Diabetes           | Binary      | Presence of diabetes                                                              | Simple Boolean                                |
 | History Of Smoking | Nominal     | Whether or not an individual is a smoker, is not a smoker, or quit smoking        | Nominal categories                            |
 | LVEDV              | Continuous  | Ventricular volume in the diastolic phase                                         | Measured in mL                                |
 | LVESV              | Continuous  | Ventricular volume in the systolic phase                                          | Measured in mL                                |
@@ -31,19 +31,19 @@
 | AS_HE              | Ordinal     | Damage to the apical septal portion of the heart                                  | On a scale: 1 (25%) to 4 (100%, tissue death) |
 | AI_HE              | Ordinal     | Damage to the apical interior portion of the heart                                | On a scale: 1 (25%) to 4 (100%, tissue death) |
 | Apex_HE            | Ordinal     | Damage to the apex of the heart                                                   | On a scale: 1 (25%) to 4 (100%, tissue death) |
-| BA_Ischemia        | Boolean     | Loss of blood flow to the tissue on the basal anterior portion of the heart       | Simple Boolean                                |
-| BAS_Ischemia       | Boolean     | Loss of blood flow to the tissue on the basal antero-septal portion of the heart  | Simple Boolean                                |
-| BIS_Ischemia       | Boolean     | Loss of blood flow to the tissue on the basal intero-septal portion of the heart  | Simple Boolean                                |
-| BI_Ischemia        | Boolean     | Loss of blood flow to the tissue on the basal interior portion of the heart       | Simple Boolean                                |
-| BIL_Ischemia       | Boolean     | Loss of blood flow to the tissue on the basal intero-lateral portion of the heart | Simple Boolean                                |
-| BAL_Ischemia       | Boolean     | Loss of blood flow to the tissue on the basal antero-lateral portion of the heart | Simple Boolean                                |
-| MA_Ischemia        | Boolean     | Loss of blood flow to the tissue on the mid anterior portion of the heart         | Simple Boolean                                |
-| MAS_Ischemia       | Boolean     | Loss of blood flow to the tissue on the mid antero-septal portion of the heart    | Simple Boolean                                |
-| MIS_Ischemia       | Boolean     | Loss of blood flow to the tissue on the mid intero-septal portion of the heart    | Simple Boolean                                |
-| MI_Ischemia        | Boolean     | Loss of blood flow to the tissue on the mid interor portion of the heart          | Simple Boolean                                |
-| MIL_Ischemia       | Boolean     | Loss of blood flow to the tissue on the mid intero-lateral portion of the heart   | Simple Boolean                                |
-| MAL_Ischemia       | Boolean     | Loss of blood flow to the tissue on the mid antero-lateral portion of the heart   | Simple Boolean                                |
-| AA_Ischemia        | Boolean     | Loss of blood flow to the tissue on the apical anterior portion of the heart      | Simple Boolean                                |
-| AS_Ischemia        | Boolean     | Loss of blood flow to the tissue on the apical antero-septal portion of the heart | Simple Boolean                                |
-| AI_Ischemia        | Boolean     | Loss of blood flow to the tissue on the apical inferior portion of the heart      | Simple Boolean                                |
-| AL_Ischemia        | Boolean     | Loss of blood flow to the tissue on the apical lateral portion of the heart       | Simple Boolean                                |
+| BA_Ischemia        | Binary      | Loss of blood flow to the tissue on the basal anterior portion of the heart       | Simple Boolean                                |
+| BAS_Ischemia       | Binary      | Loss of blood flow to the tissue on the basal antero-septal portion of the heart  | Simple Boolean                                |
+| BIS_Ischemia       | Binary      | Loss of blood flow to the tissue on the basal intero-septal portion of the heart  | Simple Boolean                                |
+| BI_Ischemia        | Binary      | Loss of blood flow to the tissue on the basal interior portion of the heart       | Simple Boolean                                |
+| BIL_Ischemia       | Binary      | Loss of blood flow to the tissue on the basal intero-lateral portion of the heart | Simple Boolean                                |
+| BAL_Ischemia       | Binary      | Loss of blood flow to the tissue on the basal antero-lateral portion of the heart | Simple Boolean                                |
+| MA_Ischemia        | Binary      | Loss of blood flow to the tissue on the mid anterior portion of the heart         | Simple Boolean                                |
+| MAS_Ischemia       | Binary      | Loss of blood flow to the tissue on the mid antero-septal portion of the heart    | Simple Boolean                                |
+| MIS_Ischemia       | Binary      | Loss of blood flow to the tissue on the mid intero-septal portion of the heart    | Simple Boolean                                |
+| MI_Ischemia        | Binary      | Loss of blood flow to the tissue on the mid interor portion of the heart          | Simple Boolean                                |
+| MIL_Ischemia       | Binary      | Loss of blood flow to the tissue on the mid intero-lateral portion of the heart   | Simple Boolean                                |
+| MAL_Ischemia       | Binary      | Loss of blood flow to the tissue on the mid antero-lateral portion of the heart   | Simple Boolean                                |
+| AA_Ischemia        | Binary      | Loss of blood flow to the tissue on the apical anterior portion of the heart      | Simple Boolean                                |
+| AS_Ischemia        | Binary      | Loss of blood flow to the tissue on the apical antero-septal portion of the heart | Simple Boolean                                |
+| AI_Ischemia        | Binary      | Loss of blood flow to the tissue on the apical inferior portion of the heart      | Simple Boolean                                |
+| AL_Ischemia        | Binary      | Loss of blood flow to the tissue on the apical lateral portion of the heart       | Simple Boolean                                |
