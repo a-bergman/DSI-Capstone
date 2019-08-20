@@ -1,14 +1,14 @@
 # Problem Statement
 
-Left ventricular dilation, also known as dilated cardiomyopathy, simply put is the enlargement of the left ventricle as determined by the volume of blood in the left ventricle during the heart's diastolic phase.  It is serious because the muscle wall thins and its ability to pump blood out of the heart is reduced: the condition is a warning that an individual is severely at risk of developing congestive heart failure.  Being able to predict the end diastolic volume will aid cardiologists in deciding who needs further test; a patient would never be given therapy without having an image taken.  Thus a model could increase the efficiency of medical teams and reduce hospital costs.
+Left ventricular dilation, also known as dilated cardiomyopathy, is the enlargement of the left ventricle as determined by the volume of blood during the diastolic phase (when the ventricle fills with blood).  It is serious because the muscle wall thins and its ability to pump blood is reduced: the condition is a warning that a patient is at risk of developing congestive heart failure.  Being able to predict the end diastolic volume will aid cardiologists in deciding who needs further test; a patient would never be given therapy without having an image taken.  Thus a model could increase the efficiency of medical teams and reduce hospital costs.
 
-To approach this problem we will use a regression model to predict the end diastolic volume.  To judge our model's performance, we will use the root mean squared error (RMSE) and the r<sup>2</sup> score.  Within the data itself there are three classes: normal, at-risk, and high.  In addition to using the two metrics I mentioned, I will compare my regression model's predictions against the actual classifications in my data set.  Doing that extra step allows for an additional measure of performance.
+To approach this problem we will use a regression model to predict the end diastolic volume.  To judge our model's performance, we will use the root mean squared error (RMSE) and the r<sup>2</sup> score.  Within the data itself there are three classes: normal, at-risk, and high.  In addition to using the two metrics I mentioned, I will compare my regression model's predictions against the actual classifications in my data set.  That extra step allows for an additional measure of performance.
 
 -------
 
 # Executive Summary
 
-The cost of healthcare has been in the news for the past couple of years because of how expensive medical testing and treatment is in the United States and cardiac imaging is no exception.  The median price of a cardiac MRI in the New York area is $1,507, but that's not all: MRI scans are very claustrophobic and can take a long time to complete.  Given both the cost and unpleasantness of MRIs, we are hoping to have a model than can be extended to non-MRI based data: we want to be able to make a prediction from patient chart information that would allow a doctor to determine if a confirmational MRI is needed.
+The cost of healthcare has been in the news because of how expensive it is in the United States and cardiac imaging is no exception.  The median price of a cardiac MRI in the New York area is $1,507, but that's not all: MRI scans are very claustrophobic and can take a long time to complete.  Given both the cost and unpleasantness of MRIs, we are hoping to have a model than can be extended to non-MRI based data: we want to be able to make a prediction from patient chart information that would allow a doctor to determine if a confirmational MRI is needed.
 
 We began to search for cardiac data online, but we had difficulty getting the data we need because of how specific the data is.  We then began reaching out to cardiologists as a last resort to see if we would be able to get good data.  Luckily we were given a cardiac MRI data set by two doctors at New York Presbyterian Hospital.  The data we received was remarkably clean: only six columns had missing data and none had a huge amount of it.  Upon closer examination, the data was not entirely in the format we had initially expected: there were a total of four numeric columns and the other 44 were ordinal or nominal.
 
@@ -29,7 +29,7 @@ While the data overall is good data, there were concerns that cropped up.  First
 
 -------
 
-# Conclusions And 
+# Conclusions
 
 -------
 
