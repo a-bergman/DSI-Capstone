@@ -1,7 +1,7 @@
 | Column             | Data Type   | Description                                                                       | Comments                                      |
 |:-------------------|:------------|:----------------------------------------------------------------------------------|:----------------------------------------------|
 | Name               | Object      | Name of the MRI image                                                             |                                               |
-| Age                | Binary      | Age at time of the MRI                                                            |                                               |
+| Age                | Discrete    | Age at time of the MRI                                                            |                                               |
 | Sex                | Binary      | Patient sex                                                                       | Simple Boolean                                |
 | Hypertension       | Binary      | Presence of hypertension                                                          | Does not include degree of hypertension       |
 | Hyperlipidemia     | Binary      | Presence of hyperlipidemia                                                        | Does not include degree of hyperlipidemia     |
