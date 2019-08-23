@@ -2,7 +2,7 @@
 
 Left ventricular dilation, also known as dilated cardiomyopathy, is the enlargement of the left ventricle as indicated by the volume of blood during the diastolic phase (when the ventricle fills with blood).  It is serious because the muscle wall thins and its ability to pump blood is reduced: the condition is a warning that a patient is at serious risk of developing congestive heart failure.  Being able to predict the end diastolic volume will aid cardiologists in deciding who needs further testing. A model could increase the efficiency by indicating which patients need to be send to MRI rather than having to send everyone to MRI.
 
-To approach this problem we will use a regression model to predict the end diastolic volume.  To judge our model's performance, we will use the root mean squared error (RMSE) and the r<sup>2</sup> score.  Within the data itself there are three classes: normal, at-risk, and high.  In addition to using the two metrics we mentioned, we will compare the regression model's predictions against the actual classifications in the data.  That extra step allows for an additional measure of performance.
+To approach this problem we will use a regression model to predict the end diastolic volume.  To judge our model's performance, we will use the root mean squared error (RMSE) and the r<sup>2</sup> score.
 
 -------
 
@@ -16,7 +16,7 @@ Most of the cleaning we had to do was reformating column headers (shortening the
 
 Because we have so many columns in the data set, we felt it was necessary to engineer our features in a way that reduced the total number of them.  Because the vast majority of our values are `0`, we could not make interaction columns since that relies on multiplication.  Instead, we opted to used a cardiac segmentation diagram as a way to sum the individual segments; when modeling we use either the summed columns or the originals, never both.  We also had a column with a lognormal distribution, so we created a column containing the log values.
 
-We will begin with a simple linear regression model,  evaluate it's performance on all possible combinations of features, and add complexity to the simple model to see what effect that has on our predictions. 
+We will begin with a simple linear regression model,  evaluate it's performance on all possible combinations of features, and add complexity to the simple model to see what effect that has on our predictions.  Additionally, we will be make use of two non-linear models to see how they compare to the linear ones; we will also compare the effects of the possible combinations of features.
 
 
 [Source](https://www.newchoicehealth.com/places/new-york/new-york/mri/cardiac-mri]) for the median price.
@@ -30,6 +30,18 @@ While the data overall is good data, there were concerns that cropped up.  First
 -------
 
 # Conclusions
+
+Based off of a number of factors (metric scores, residual plots, and prediction distributions) we determined that we were better off choosing two models: one for interpretability and one for performance:
+
+
+- A random forest model with our engineered columns for performance
+
+
+- An XGBoost model also with our engineered columns for interpretability.
+
+
+We chose two because the random forest models are black-box models, that is to say that it is very difficult to explain what exactly happened behind the scenes.  On the other hand, the XGBoost is highly interpretable because coefficients can be derived from the model; those coefficients allow for the significance of features to be determined.
+
 
 -------
 
