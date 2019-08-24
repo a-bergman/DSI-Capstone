@@ -31,7 +31,7 @@ While the data overall is good data, there were concerns that cropped up.  First
 
 # Conclusions
 
-Based off of a number of factors (metric scores, residual plots, and prediction distributions) we determined that we were better off choosing two models: one for interpretability and one for performance:
+We chose two models because based off of our metrics, residual plots, and prediction plots because of the types of models we used.  Our best performing model was a random forest regressor, but because that is a black box method we felt the need to also select a model that we could interpret.  For that reason, we chose a second model that we could interpret.  We ended up choosing:
 
 
 - A random forest model with our engineered columns for performance
@@ -39,10 +39,22 @@ Based off of a number of factors (metric scores, residual plots, and prediction 
 
 - An XGBoost model also with our engineered columns for interpretability.
 
+The models were not overfit at all: the models had metric scores for the train and test data that were virtually identical and both had very high R<sup>2</sup> scores.  However to assure that the R<sup>2</sup> score was not inflated by the number of columns, we also calculated and adjusted R<sup>2</sup> score and found that both scores were also virtually identical.
 
-We chose two because the random forest models are black-box models, that is to say that it is very difficult to explain what exactly happened behind the scenes.  On the other hand, the XGBoost is highly interpretable because coefficients can be derived from the model; those coefficients allow for the significance of features to be determined.
 
-
--------
+-----
 
 # Next Steps
+
+
+Knowing that we can predict the end diastolic volume with a good degree of accuracy, we want to try to get data from actual patient records: it's all well and good to predict the end diastolic volume from an existing MRI, but we are aiming to help reduce the cost to the health care system.  We are anticipating that it will be difficult to do so because of HIPPA, but we feel that using data from charts is the most sensible step forward.
+
+In terms of modeling, we would like to continue optimizing the random forest and XGBoosting models to make them even more accurate; doing so entails simply further experimentation with the hyperparameters.  We also would like to implement other boosting models as well as an extra-trees model  to get a broader sense of what does and does not work with this type of data.  Another area we would like to work further on is the interpretability of the random forest model: there is a library call PDPbox that would allow for us to interpret the relationships between feature importance and the generated predictions.
+
+Feature engineering also is an area where we would like to spend more time in.  While we were able to develop a new way of grouping the columns, we feel that further developing ways of representing the columns could improve performance as well: now that we know which features have high coefficients, we want to try emphasizing those columns as well.
+
+-----
+
+# Acknowledgments
+
+We want to thank Drs. Jonathan Weinsaft and Jonathan Kochav from New York Presbyterian Hospital-Weill Cornell Medical Center for allowing me to use their clinical data for this project.
