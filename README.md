@@ -2,7 +2,7 @@
 
 Left ventricular dilation, also known as dilated cardiomyopathy, is the enlargement of the left ventricle as indicated by the volume of blood during the diastolic phase (when the ventricle fills with blood).  It is serious because the muscle wall thins and its ability to pump blood is reduced: the condition is a warning that a patient is at serious risk of developing congestive heart failure.  Being able to predict the end diastolic volume (EDV) will aid cardiologists in deciding who needs further testing. Such a model could increase the efficiency by indicating which patients need to be send to MRI rather than having to send everyone to MRI.
 
-To approach this problem we will use a regression model to predict the end diastolic volume.  To judge our model's performance, we will use the root mean squared error (RMSE), mean absolute error (MAE), and a R<sup>2</sup> and and adjusted R<sup>2</sup> score.
+To approach this problem we will use regression models to predict the end diastolic volume.  To judge our model's performance, we will use the root mean squared error (RMSE), mean absolute error (MAE), and a R<sup>2</sup> and and adjusted R<sup>2</sup> score.
 
 -------
 
@@ -33,16 +33,9 @@ However our primary concern were errors in the data: the data was based off of M
 
 # Conclusions
 
-We chose two models because based off of our metrics, residual plots, and prediction plots because of the types of models we used.  Our best performing model was a random forest regressor, but because that is a black box method we felt the need to also select a model that we could interpret.  For that reason, we chose a second model that we could interpret.  We ended up choosing:
+To determine the best model, we evaluated our models on four metrics and the residual plots.  Based off of metric scores and residuals, our best model is a random forest regression.  We want to have a model that is as accurate as possible, but we also want a model that is easy to interpret for any audience.  For that reason we chose to not select a single model as our best model.  While we chose a random forest regression as the best, random forest regressors are black box models meaning that they are not easily interpreted.  As a result, we chose a second model, an XGBoost model, as an interpretable model.  We also compared our engineered features against our original features and found that they improved the performance of both models.  So our best models are a random forest regressor with the engineered features and an XGBoost model also with the engineered features.s
 
-
-- A random forest model with our engineered columns for performance
-
-
-- An XGBoost model also with our engineered columns for interpretation.
-
-The models were not overfit at all: the models had metric scores for the train and test data that were virtually identical and both had very high R<sup>2</sup> scores.  However to assure that the R<sup>2</sup> score was not inflated by the number of columns, we also calculated and adjusted R<sup>2</sup> score and found that both scores were also virtually identical.
-
+We had concerns that the models were overfit, but they actually were not overfit at all: the models had metric scores for the train and test data that were virtually identical and both had very high R<sup>2</sup> scores.  However to assure that the R<sup>2</sup> score was not being inflated by the number of featuress, we also calculated and adjusted R<sup>2</sup> score and found that both scores were also virtually identical.
 
 -----
 
@@ -59,4 +52,4 @@ Feature engineering also is an area where we would like to spend more time in.  
 
 # Acknowledgments
 
-We want to acknowledge and thank Drs. Jonathan Weinsaft and Jonathan Kochav from New York Presbyterian Hospital-Weill Cornell Medical Center for allowing us to use their clinical data for this project.
+We want to acknowledge and thank Drs. Jonathan Weinsaft and Jonathan Kochav from New York Presbyterian Hospital-Weill Cornell Medical Center for allowing us to use their clinical data for this project and answering our question about the data.
