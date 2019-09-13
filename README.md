@@ -53,3 +53,11 @@ Feature engineering also is an area where we would like to spend more time in.  
 # Acknowledgments
 
 We want to acknowledge and thank Drs. Jonathan Weinsaft and Jonathan Kochav from New York Presbyterian Hospital-Weill Cornell Medical Center for allowing us to use their clinical data for this project and answering our question about the data.
+
+-----
+
+# Links
+
+- The article I wrote about this project can be found [here](https://medium.com/analytics-vidhya/predicting-left-ventricular-end-diastolic-volume-d7d3059d6be0)
+
+- The Google Slides can be found [here](https://docs.google.com/presentation/d/1x4sl8lCc_aiaEzwZmLx5R5Lji9uyS2yY2OJZrBZz7sw/edit?usp=sharing)
