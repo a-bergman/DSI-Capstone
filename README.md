@@ -33,9 +33,13 @@ However our primary concern were errors in the data: the data was based off of M
 
 # Conclusions
 
-To determine the best model, we evaluated our models on four metrics and the residual plots.  Based off of metric scores and residuals, our best performing model is a random forest regression.  We want to have a model that is as accurate as possible, but we also want a model that is easy to interpret for any audience.  For that reason we chose to not select a single model as our best model.  While we chose a random forest regression as the best performing, random forest regressors are black box models meaning that it is difficult to interpret what is going on in the background.  As a result, we chose a second model, an XGBoost model, as an interpretable model.  We also compared our engineered features against our original features and found that they improved the performance of both models.  So our best models are a random forest regressor with the engineered features and an XGBoost model also with the engineered features.s
+To determine the best model, we evaluated our models on four metrics and the residual plots.  Based off of metric scores and residuals, our best performing model is a random forest regression.  We chose that model for two reasons:
 
-We had concerns that the models were overfit, but they actually were not overfit at all: the models had metric scores for the train and test data that were virtually identical and both had very high R<sup>2</sup> scores.  However to assure that the R<sup>2</sup> score was not being inflated by the number of featuress, we also calculated and adjusted R<sup>2</sup> score and found that both scores were also virtually identical.
+- Performance: the model had the lowest RMSE and MAE values as well as the highest R<sup>2</sup> and adjusted R<sup>2</sup> scores
+
+- Interpretability: we can extract the model's feature importances to show us what the most significant features are in the model
+
+We had concerns that the models were overfit, but they actually were not overfit at all: the models had metric scores for the train and test data that were virtually identical and both had very high R<sup>2</sup> scores.  However to assure that the R<sup>2</sup> score was not being inflated by the number of features, we also calculated and adjusted R<sup>2</sup> score and found that both scores were also virtually identical.
 
 -----
 
@@ -44,7 +48,7 @@ We had concerns that the models were overfit, but they actually were not overfit
 
 Knowing that we can predict the end diastolic volume with a good degree of accuracy, we want to try to get data from actual patient records: it's all well and good to predict the end diastolic volume from an existing MRI, but we are aiming to help reduce the cost to the health care system.  We are anticipating that it will be difficult to do so because of HIPPA, but we feel that using data from charts is the most sensible step forward.
 
-In terms of modeling, we would like to continue optimizing the random forest and XGBoosting models to make them even more accurate; doing so entails simply further experimentation with the hyperparameters.  We also would like to implement other boosting models as well as an extra-trees model  to get a broader sense of what does and does not work with this type of data.  Another area we would like to work further on is the interpretation of the random forest model: there is a library called PDPbox that would allow for us to interpret the relationships between feature importance and the generated predictions.
+In terms of modeling, we would like to continue optimizing the random forest and XGBoosting models to make them even more accurate; doing so entails simply further experimentation with the hyperparameters.  We also would like to implement other boosting models as well as an extra-trees model  to get a broader sense of what does and does not work with this type of data. 
 
 Feature engineering also is an area where we would like to spend more time in.  While we were able to develop a new way of grouping the columns, we feel that further developing ways of representing the columns could improve performance as well: now that we know which features have high coefficients, we want to try emphasizing those columns as well.
 
