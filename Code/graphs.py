@@ -324,7 +324,7 @@ def barplots(df, columns, y, labels, ylabel, titles, dim, row, col, ci = False, 
     plt.tight_layout()
     plt.show();
 
-def barplot(df, x, y, title, label, ylabel, dim, orient = "v", ci = False, hue = None):
+def barplot(df, x, y, title, label, ylabel, ticks, dim, orient = "v", ci = False, hue = None):
     """
     Parameters:
     -----------
@@ -334,6 +334,7 @@ def barplot(df, x, y, title, label, ylabel, dim, orient = "v", ci = False, hue =
     title  : title of the graph                         : str       :
     label  : the label of the x-axis                    : str       :
     ylabel : the label of the y-axis                    : str       :
+    ticks  : ticks for the y-axis                       : np.arange :
     dim    : tuple of the graph dimensions              : int       :
     orient : orientation of the graph                   : str       : "h"|"v"
     ci     : whether or not to add confidence interval  : Bool      : "sd"
@@ -354,7 +355,7 @@ def barplot(df, x, y, title, label, ylabel, dim, orient = "v", ci = False, hue =
     plt.xlabel(f"{label}", size = 16)
     plt.ylabel(f"{ylabel}", size = 16)
     plt.xticks(size = 14)
-    plt.yticks(size = 14)
+    plt.yticks(ticks = ticks, size = 14)
     plt.tight_layout();
 
 def categorical_boxplots(df, x, columns, titles, labels, ylabels, ticks, dim, row, col, hue = None, orient = "h"):
