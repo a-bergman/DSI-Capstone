@@ -33,11 +33,11 @@ However our primary concern were errors in the data: the data was based off of M
 
 # Conclusions
 
-To determine the best model, we evaluated our models on four metrics and the residual plots.  Based off of metric scores and residuals, our best performing model is a random forest regression.  We chose that model for two reasons:
+To determine the best model, we evaluated our models on four metrics and the residual plots.  Based off of metric scores and residuals, our best performing model is an XGBoost with our engineered features.  We chose that model for two reasons:
 
 - Performance: the model had the lowest RMSE and MAE values as well as the highest R<sup>2</sup> and adjusted R<sup>2</sup> scores
 
-- Interpretability: we can extract the model's feature importances to show us what the most significant features are in the model
+- Interpretability: we can extract the model's coefficients to show us what the most significant features are in the model
 
 We had concerns that the models were overfit, but they actually were not overfit at all: the models had metric scores for the train and test data that were virtually identical and both had very high R<sup>2</sup> scores.  However to assure that the R<sup>2</sup> score was not being inflated by the number of features, we also calculated and adjusted R<sup>2</sup> score and found that both scores were also virtually identical.
 
